@@ -1,0 +1,81 @@
+.accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid black;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  .editRemoveBtnGrp{
+      display: inline-block;
+      margin-left: 60%;
+      padding: 0px 14px 0px 14px;
+      
+  }
+  
+  .editBtn{
+    padding: 0px 4px;
+    color: #fff;
+    background-color:green;
+    margin-right: 6px;
+    cursor: pointer;
+  }
+
+  .removeBtn{
+      color: #fff;
+      background-color: red;
+      padding: 0px 4px;
+      cursor: pointer;
+  }
+  .rowItem{
+      margin-left: 1%;
+  }
+  .userItems{
+      margin-right: 9%;
+      margin-top: 1%;
+      padding: 0px 4px;
+      border: 2px solid black;
+  }
+
+  .loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
